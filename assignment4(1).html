@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num = window.prompt("enter the number:");
+      function reverse(Number) {
+        let n = Number;
+        let rev = 0;
+        while (n > 0) {
+          let res = n % 10;
+          rev = rev * 10 + res;
+          n = Math.floor(n / 10);
+        }
+        return rev;
+      }
+      document.write(reverse(num));
+    </script>
+  </body>
+</html>

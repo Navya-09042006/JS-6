@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        border: 2px solid black;
+        width: 10cm;
+        height: 6cm;
+        padding: 10px;
+        transform: translate(110%, 30%);
+        background-color: aqua;
+      }
+      button {
+        background-color: rgb(139, 204, 28);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">
+      <label>1st Number:</label>
+      <input id="in1" type="number" /><br /><br />
+      <label>2nd Number:</label>
+      <input id="in2" type="number" /><br /><br />
+      <button onclick="mul()">Multiply</button>
+      <button onclick="div()">Divide</button><br /><br />
+      <p>The result is:</p>
+      <textarea id="result"></textarea>
+    </div>
+    <script>
+      function mul() {
+        const first = parseInt(document.getElementById("in1").value);
+        const second = parseInt(document.getElementById("in2").value);
+        const result = first * second;
+        document.getElementById("result").value = result;
+      }
+      function div() {
+        const first = parseInt(document.getElementById("in1").value);
+        const second = parseInt(document.getElementById("in2").value);
+        if (second === 0) {
+          alert("can't define");
+          return false;
+        }
+        const result = first / second;
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
